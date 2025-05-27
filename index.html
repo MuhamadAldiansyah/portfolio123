@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Web | Portofolio</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <nav>
+          <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">Portofolio</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <main class="content">
+        <section class="hero">
+          <img src="online.png" alt="" />
+          <div class="hero-content">
+            <h1>Biodata Siswa SMKN 1 Kedawung</h1>
+            <br />
+            <br /><br />
+            <p>
+                Silahkan isi biodata dibawah ini untuk data siswa SMKN 1 Kedawung
+            </p>
+            <a href="#" class="action-btn" id="openModalBtn">Pendataan</a>
+            <h2 style="margin-top: 100px;">Rayi Iftikhar Al Fath - Kelas X DKV 3 SMK 1 Kedawung</h2>
+          </div>
+        </section>
+      </main>
+      <div class="footer">
+        <footer>
+          <ul>
+            <li>
+              <img src="instagram.png" alt="" /><a><p>Instagram</p></a>
+            </li>
+            <li>
+              <img src="facebook.png" alt="" /><a><p>Facebook</p></a>
+            </li>
+            <li>
+              <img src="twitter.png" alt="" /><a><p>Twitter</p></a>
+            </li>
+            <li>
+              <img src="telegram.png" alt="" /><a><p>Telegram</p></a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+
+    <div id="modalForm" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModalBtn">&times;</span>
+        <h2>Formulir Biodata Pendataan Siswa</h2>
+        <form>
+        <fieldset>
+            <legend>Data Siswa</legend>
+            <label>Nama Lengkap:</label><input type="text" required><br>
+            <label>NISN:</label><input type="text" required><br>
+            <label>Tempat dan Tanggal Lahir:</label><input type="text" required><br>
+            <label>Jenis Kelamin:</label><input type="text"><br>
+            <label>Agama:</label><input type="text"><br>
+            <label>Status dalam Keluarga:</label><input type="text"><br>
+            <label>Alamat Rumah:</label><input type="text"><br>
+            <label>Nomor Telepon Rumah:</label><input type="text"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Data Orang Tua/Wali</legend>
+            <label>Nama Ayah dan Ibu:</label><input type="text"><br>
+            <label>NIK Ayah dan Ibu:</label><input type="text"><br>
+            <label>Tempat dan Tanggal Lahir Ayah dan Ibu:</label><input type="text"><br>
+            <label>Agama Ayah dan Ibu:</label><input type="text"><br>
+            <label>Pendidikan Terakhir Ayah dan Ibu:</label><input type="text"><br>
+            <label>Pekerjaan Ayah dan Ibu:</label><input type="text"><br>
+            <label>Alamat Orang Tua:</label><input type="text"><br>
+            <label>Nomor Telepon Orang Tua:</label><input type="text"><br>
+            <label>Nama dan Info Wali:</label><input type="text"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Data Sekolah</legend>
+            <label>Nama Sekolah Asal:</label><input type="text"><br>
+            <label>Kelas dan Semester:</label><input type="text"><br>
+        </fieldset>
+
+        <br>
+        <button type="submit" class="action-btn">Kirim Data</button>
+        </form>
+    </div>
+    </div>
+
+    <script>
+  const openModalBtn = document.getElementById('openModalBtn');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const modal = document.getElementById('modalForm');
+
+  openModalBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    modal.classList.remove('hidden');
+  });
+
+  closeModalBtn.addEventListener('click', function () {
+    modal.classList.add('hidden');
+  });
+
+  window.addEventListener('click', function (e) {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+    }
+  });
+</script>
+
+
+  </body>
+</html>
+<!-- Simpan dengan nama index.html -->
